@@ -1,5 +1,12 @@
 <?php
 
+// Untuk koneksi database local
+// $server = "localhost";
+// $user = "root";
+// $password = "";
+// $nama_database = "pendaftaran_siswa";
+
+// Untuk koneksi database heroku
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $cleardb_url["host"];
 $user = $cleardb_url["user"];
