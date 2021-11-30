@@ -87,6 +87,8 @@ if (mysqli_num_rows($query) < 1) {
                         <input type="text" name="sekolah_asal" class="form-control rounded" placeholder="Sekolah asal" value="<?php echo $siswa['sekolah_asal'] ?>" required />
                     </div>
 
+                    <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" required/>
+
                     <div class="form-group my-2">
                         <input class="btn btn-primary" type="submit" value="Simpan" name="simpan" />
                         <a class="btn btn-primary" href="index.php">Kembali</a>
