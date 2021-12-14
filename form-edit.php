@@ -40,7 +40,7 @@ if (mysqli_num_rows($query) < 1) {
 
         <section class="mb-4 d-flex flex-column align-items-center justify-content-center">
             <article class="col-md-6">
-                <form action="proses-edit.php" method="POST">
+                <form action="proses-edit.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group my-2">
                         <label for="nama">Nama</label>
                         <input type="text" name="nama" class="form-control rounded" placeholder="Nama lengkap" value="<?php echo $siswa['nama'] ?>" required />
@@ -85,6 +85,12 @@ if (mysqli_num_rows($query) < 1) {
                     <div class="form-group my-2">
                         <label for="sekolah_asal">Sekolah Asal: </label>
                         <input type="text" name="sekolah_asal" class="form-control rounded" placeholder="Sekolah asal" value="<?php echo $siswa['sekolah_asal'] ?>" required />
+                    </div>
+
+                    <div class="form-group my-2">
+                        <label for="foto" class="form-label">Foto</label>
+                        <img src="<?php echo $siswa["foto"] ?>" width="150px" height="150px" class="d-block mb-2"/>
+                        <input class="form-control" type="file" name="foto" id="foto">
                     </div>
 
                     <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" required/>

@@ -32,6 +32,9 @@
                     echo "<p class=\"text-success text-center\">Pendaftaran siswa baru berhasil!";
                 } else {
                     echo "<p class=\"text-danger text-center\">Pendaftaran siswa baru gagal!";
+
+                    if ($_GET['error'] == 'upload_fail')
+                        echo "<p class=\"text-danger text-center\">Tidak bisa mengupload foto";
                 }
             }
         ?>

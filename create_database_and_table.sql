@@ -9,3 +9,5 @@ CREATE TABLE `pendaftaran_siswa`.`calon_siswa` (
     `sekolah_asal` VARCHAR(64) NOT NULL ,    
     PRIMARY KEY  (`id`)
 ) ENGINE = InnoDB;
+
+ALTER TABLE calon_siswa ADD COLUMN foto varchar(200) NOT NULL DEFAULT 'uploaded_images/default.jpg';

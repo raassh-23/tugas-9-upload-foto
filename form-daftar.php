@@ -19,7 +19,7 @@
 
         <section class="mb-4 d-flex flex-column align-items-center justify-content-center">
             <article class="col-md-6">
-                <form action="proses-pendaftaran.php" method="POST">
+                <form action="proses-pendaftaran.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group my-2">
                         <label for="nama">Nama</label>
                         <input type="text" name="nama" class="form-control rounded" placeholder="Nama lengkap" required />
@@ -65,6 +65,11 @@
                     </div>
 
                     <div class="form-group my-2">
+                        <label for="foto" class="form-label">Foto</label>
+                        <input class="form-control" type="file" name="foto" id="foto" required>
+                    </div>
+
+                    <div class="form-group my-3">
                         <input class="btn btn-primary" type="submit" value="Daftar" name="daftar" />
                         <a class="btn btn-primary" href="index.php">kembali</a>
                     </div>

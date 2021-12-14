@@ -24,6 +24,7 @@
                 <table class="table table-striped table-hover mt-2">
                     <thead>
                         <tr class="table-dark">
+                            <th scope="col">Foto</th>
                             <th scope="col">No</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Alamat</th>
@@ -41,6 +42,7 @@
                         while ($siswa = mysqli_fetch_array($query)) {
                             echo "<tr>";
 
+                            echo "<td><img src='" . $siswa['foto'] . "' width='100' height='100' /></td>";
                             echo "<td>" . $siswa['id'] . "</td>";
                             echo "<td>" . $siswa['nama'] . "</td>";
                             echo "<td>" . $siswa['alamat'] . "</td>";
